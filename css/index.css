@@ -37,8 +37,6 @@ body {
 .container {
     height: 100vh;
     padding: 25px;
-
-    outline: 2px solid green;
 }
 
 /* MAIN INTRO */
@@ -81,7 +79,6 @@ body {
 .even-columns > div {
     font-family: var(--ff-secondary);
     color: var(--fc-secondary);
-    outline: 2px solid green;
 }
 
 .even-columns > div h2 {
@@ -198,9 +195,6 @@ body {
 }
 
 @media (width <= 1049px) {
-    img {
-
-    }
 
     .even-columns {
         gap: 1.5rem;

@@ -85,6 +85,10 @@ body {
     font-weight: var(--fw-bolder);
 }
 
+/* .even-columns > div p {
+    color: white;
+} */
+
 .last-con {
     background: url('../images/last.png');
     background-position: center;
@@ -92,18 +96,18 @@ body {
     background-repeat: no-repeat;
 }
 
-.last {
+.lastx {
     gap: 5rem;
 }
 
-.last > div {
+.lastx > div {
     padding: 25px;
     background-color: var(--bc-main);
     border-radius: 25px;
 }
 
-.last > div p {
-    color: var(--fc-main);
+.lastx > div > p {
+    color: white;
 }
 
 /* MEDIA QUERIES */
@@ -136,7 +140,7 @@ body {
         font-size: 25px;
     }
 
-    .last > div {
+    .lastx > div {
         max-width: 450px;
     }
 }
@@ -179,17 +183,17 @@ body {
         font-size: 20px;
     }
 
-    .last {
+    .lastx {
         gap: 5rem;
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
     }
 
-    .last > div {
+    .lastx > div {
         max-width: 450px;
     }
 
-    .last > div p {
+    .lastx > div p {
         font-size: 20px;
     }
 }
@@ -208,17 +212,17 @@ body {
         font-size: 18px;
     }
 
-    .last {
+    .lastx {
         display: flex;
         flex-direction: column;
         gap: 2rem;
     }
 
-    .last > div {
+    .lastx > div {
         max-width: 550px;
     }
 
-    .last > div p {
+    .lastx > div p {
         font-size: 18px;
     }
 }
@@ -233,11 +237,11 @@ body {
         font-size: 20px;
     }
 
-    .last {
+    .lastx {
         gap: 0.5rem;
     }
 
-    .last > div p {
+    .lastx > div p {
         font-size: 15px;
     }
 }
@@ -260,7 +264,7 @@ body {
         font-size: 15px;
     }
 
-    .last > div p {
+    .lastx > div p {
         font-size: 12px;
     }
 }

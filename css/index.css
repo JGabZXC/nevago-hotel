@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --ff-secondary: "Open Sans", sans-serif;
+    --ff-primary: "Noto Serif", serif;
+
+    --fc-main: #FFFFFF;
+    --fc-secondary: #000000;
+
+    --bc-main: #35481C;
+
+    --fw-lighter: 300;
+    --fw-normal: 600;
+    --fw-bolder: 900;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.padding-block-40 {
+    padding-block: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--ff-primary);
+}
+
+.container {
+    height: 100vh;
+    padding: 25px;
+
+    outline: 2px solid green;
+}
+
+/* MAIN INTRO */
+
+.main-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main-con {
+    background: url('../images/NEVAGO_HOTEL.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-intro h1 {
+    text-transform: uppercase;
+    font-weight: var(--fw-bolder);
+    color: var(--fc-main);
+}
+
+.main-intro p {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-lighter);
+    color: var(--fc-main);
+}
+
+/* COLUMNS GLOBAL SETTINGS */
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+    padding-block: 20px;
+}
+
+.even-columns > div {
+    font-family: var(--ff-secondary);
+    color: var(--fc-secondary);
+    outline: 2px solid green;
+}
+
+.even-columns > div h2 {
+    font-weight: var(--fw-bolder);
+}
+
+.last-con {
+    background: url('../images/last.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.last {
+    gap: 5rem;
+}
+
+.last > div {
+    padding: 25px;
+    background-color: var(--bc-main);
+    border-radius: 25px;
+}
+
+.last > div p {
+    color: var(--fc-main);
+}
+
+/* MEDIA QUERIES */
+
+@media (width >= 1320px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-intro h1{
+        font-size: 75px;
+    }
+
+    .main-intro p {
+        font-size: 55px;
+    }
+
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .even-columns > div h2 {
+        font-size: 35px;
+    }
+
+    .even-columns > div p {
+        font-size: 25px;
+    }
+
+    .last > div {
+        max-width: 450px;
+    }
+}
+
+@media (width <= 1319px) {
+    img {
+        max-width: 30%;
+        margin-inline: auto;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-block: 0;
+    }
+
+    .main-intro h1{
+        font-size: 75px;
+    }
+
+    .main-intro p {
+        font-size: 55px;
+    }
+
+    .even-columns {
+        padding: 0;
+        gap: 5px;
+    }
+
+    .even-columns > div {
+        max-width: 800px;
+    }
+
+    .even-columns > div h2 {
+        font-size: 25px;
+    }
+
+    .even-columns > div p {
+        font-size: 20px;
+    }
+
+    .last {
+        gap: 5rem;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .last > div {
+        max-width: 450px;
+    }
+
+    .last > div p {
+        font-size: 20px;
+    }
+}
+
+@media (width <= 1049px) {
+    img {
+
+    }
+
+    .even-columns {
+        gap: 1.5rem;
+    }
+
+    .even-columns > div h2 {
+        font-size: 23px;
+    }
+
+    .even-columns > div p {
+        font-size: 18px;
+    }
+
+    .last {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .last > div {
+        max-width: 550px;
+    }
+
+    .last > div p {
+        font-size: 18px;
+    }
+}
+
+@media (width <= 575px) {
+
+    .main-intro h1 {
+        font-size: 35px;
+    }
+
+    .main-intro p {
+        font-size: 20px;
+    }
+
+    .last {
+        gap: 0.5rem;
+    }
+
+    .last > div p {
+        font-size: 15px;
+    }
+}
+
+@media (width <= 400px) {
+
+    .main-intro h1 {
+        font-size: 35px;
+    }
+
+    .main-intro p {
+        font-size: 20px;
+    }
+
+    .even-columns > div h2{
+        font-size: 18px;
+    }
+
+    .even-columns > div p {
+        font-size: 15px;
+    }
+
+    .last > div p {
+        font-size: 12px;
+    }
+}

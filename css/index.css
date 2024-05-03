@@ -28,6 +28,10 @@ img {
 
 /* ------------- GENERAL STYLING ------------- */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--ff-primary);
 }
@@ -74,14 +78,10 @@ header {
 .even-columns > div img {
     max-height: 400px;
     max-width: 100%;
-    transition: scale 1s ease;
-}
-
-.even-columns > div img:hover {
-    scale: 1.1;
 }
 
 /* ------------- BODY STYLING ------------- */
+
 .navbar {
     position: absolute;
     left: 0;
@@ -165,12 +165,6 @@ header {
     padding: 40px 20px;
     border-radius: 25px;
     background-color: #35481C;
-    transition: transform .5s ease-out;
-}
-
-.last > div:hover {
-    background-color: #65794c;
-    transform: translateY(-50px);
 }
 
 .last > div p {

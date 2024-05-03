@@ -21,59 +21,83 @@
     box-sizing: border-box;
 }
 
-.padding-block-40 {
-    padding-block: 0;
-}
-
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
 }
+
+/* ------------- GENERAL STYLING ------------- */
 
 body {
     font-family: var(--ff-primary);
 }
 
-.container {
-    height: 100vh;
-    padding: 25px;
-}
-
-/* MAIN INTRO */
-
-.main-con {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.main-con {
+.first {
     background: url('../images/NEVAGO_HOTEL.png');
-    background-position: center;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
-.main-intro h1 {
-    text-transform: uppercase;
-    font-weight: var(--fw-bolder);
-    color: var(--fc-main);
+.container {
+    min-height: 100vh;
+    padding-inline: 25px;
 }
 
-.main-intro p {
-    font-family: var(--ff-secondary);
-    font-weight: var(--fw-lighter);
-    color: var(--fc-main);
+
+.last-el {
+    background: url('../images/last.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* COLUMNS GLOBAL SETTINGS */
+.block-padding {
+    padding-block: 25px;
+}
 
 .even-columns {
     display: grid;
-    gap: 1rem;
-    padding-block: 20px;
+    gap: 2em;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+.even-columns > div {
+    max-width: 500px;
+}
+
+.even-columns > div img {
+    max-height: 400px;
+    max-width: 100%;
+}
+
+/* ------------- BODY STYLING ------------- */
+
+.main-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-intro {
+    text-align: center;
+    color: white;
+}
+
+.main-intro h1 {
+    font-size: 75px;
+    font-weight: var(--fw-bolder);
+    color: var(--fc-main);
+    text-transform: uppercase;
+}
+
+.main-intro p {
+    font-size: 45px;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-lighter);
+    color: var(--fc-main);
 }
 
 .even-columns > div {
@@ -82,189 +106,65 @@ body {
 }
 
 .even-columns > div h2 {
+    font-size: 30px;
     font-weight: var(--fw-bolder);
 }
 
-/* .even-columns > div p {
-    color: white;
-} */
-
-.last-con {
-    background: url('../images/last.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.even-columns > div p {
+    font-size: 20px;
 }
 
-.lastx {
-    gap: 5rem;
-}
-
-.lastx > div {
-    padding: 25px;
-    background-color: var(--bc-main);
+.last > div {
+    max-width: 350px;
+    padding: 40px 10px;
     border-radius: 25px;
+    background-color: var(--bc-main);;
 }
 
-.lastx > div > p {
-    color: white;
+.last > div p {
+    font-size: 20px;
+    color: var(--fc-main);
 }
 
-/* MEDIA QUERIES */
-
-@media (width >= 1320px) {
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .main-intro h1{
-        font-size: 75px;
-    }
-
-    .main-intro p {
-        font-size: 55px;
-    }
-
-    .even-columns {
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-    }
-
-    .even-columns > div h2 {
-        font-size: 35px;
-    }
-
-    .even-columns > div p {
-        font-size: 25px;
-    }
-
-    .lastx > div {
-        max-width: 450px;
-    }
-}
-
-@media (width <= 1319px) {
-    img {
-        max-width: 30%;
-        margin-inline: auto;
-    }
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-block: 0;
-    }
-
-    .main-intro h1{
-        font-size: 75px;
-    }
-
-    .main-intro p {
-        font-size: 55px;
-    }
-
-    .even-columns {
+@media (width <= 1080px) {
+    .main-intro {
         padding: 0;
-        gap: 5px;
     }
 
-    .even-columns > div {
-        max-width: 800px;
+    .main-intro h1 {
+        font-size: 35px;
+        text-transform: uppercase;
     }
 
-    .even-columns > div h2 {
+    .main-intro p {
         font-size: 25px;
     }
 
-    .even-columns > div p {
-        font-size: 20px;
-    }
-
-    .lastx {
+    .even-columns {
         gap: 5rem;
-        grid-auto-flow: column;
+        grid-auto-flow: row;
         grid-auto-columns: 1fr;
     }
 
-    .lastx > div {
-        max-width: 450px;
+    .last > div {
+        max-width: 650px;
     }
 
-    .lastx > div p {
-        font-size: 20px;
+    .last > div p {
+        font-size: 24px;
     }
 }
 
-@media (width <= 1049px) {
-
+@media (width <= 800px) {
     .even-columns {
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
-    .even-columns > div h2 {
-        font-size: 23px;
+    .last > div {
+        max-width: 100%;
     }
 
-    .even-columns > div p {
-        font-size: 18px;
-    }
-
-    .lastx {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .lastx > div {
-        max-width: 550px;
-    }
-
-    .lastx > div p {
-        font-size: 18px;
-    }
-}
-
-@media (width <= 575px) {
-
-    .main-intro h1 {
-        font-size: 35px;
-    }
-
-    .main-intro p {
+    .last > div p {
         font-size: 20px;
-    }
-
-    .lastx {
-        gap: 0.5rem;
-    }
-
-    .lastx > div p {
-        font-size: 15px;
-    }
-}
-
-@media (width <= 400px) {
-
-    .main-intro h1 {
-        font-size: 35px;
-    }
-
-    .main-intro p {
-        font-size: 20px;
-    }
-
-    .even-columns > div h2{
-        font-size: 18px;
-    }
-
-    .even-columns > div p {
-        font-size: 15px;
-    }
-
-    .lastx > div p {
-        font-size: 12px;
     }
 }
